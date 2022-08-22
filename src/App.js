@@ -1,14 +1,15 @@
-import './App.css';
-import carData from './fakeData'
+import "./App.css";
+import CartDetails from "./Components/CartDetails/CartDetails";
+import Header from "./Components/Header/Header";
+
 
 function App() {
-  console.log( carData);
   return (
-    <div className="App">
-    
-    </div>
+    <>
+    <Header></Header>
+     <CartDetails></CartDetails>
+    </>
   );
 }
 
 export default App;
- 

@@ -1,0 +1,9 @@
+.cartProduct-container{
+    display: flex;
+    border-bottom: 1px solid lightgray;
+}
+
+.cartProduct-container img {
+    width: 150px;
+    margin: 5px;
+}
