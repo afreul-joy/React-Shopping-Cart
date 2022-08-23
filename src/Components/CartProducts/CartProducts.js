@@ -1,8 +1,10 @@
 import React from "react";
+import { Button } from "react-bootstrap";
 import './CartProducts.css'
 
 const CartProducts = (props) => {
-  console.log(props.product);
+  // console.log(props.product);
+  
   const { name, description, img, _id,price } = props.product;
   return (
     <div className="cartProduct-container">
@@ -14,6 +16,7 @@ const CartProducts = (props) => {
         <h3> {name}</h3>
         <p> {description}</p>
         <p> {price}</p>
+        <Button onClick={()=>(props.handleButtonClick(props.product))} className="btn btn-primary mb-2"> Add to Cart </Button> 
       </div>{" "}
     </div>
   );
