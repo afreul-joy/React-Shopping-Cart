@@ -1,31 +1,43 @@
-import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import React from "react";
+import { Container, Nav, Navbar } from "react-bootstrap";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
-    return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+
+  return (
+    <div>
+      <Navbar className="navigation" expand="lg">
         <Container>
-          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="#features">Features
-              </Nav.Link>
-              <Nav.Link href="#pricing">Pricing</Nav.Link>
-            </Nav>
-            <Nav>
-              <Nav.Link href="#deets">More deets</Nav.Link>
-              <Nav.Link eventKey={2} href="#memes">
-                Dank memes
-              </Nav.Link>
+          <Navbar.Brand as={Link} to="/">
+            {/* <img width="100px" height="80px" src={brand} alt="logo" />  */}
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ms-auto">
+              <div className="navmenu">
+                <NavLink
+                  to="/"
+                  className={(selected) =>
+                    selected.isActive ? "selected" : ""
+                  }
+                >
+                  Home
+                </NavLink>
+                <NavLink
+                  to="/products"
+                  className={(selected) =>
+                    selected.isActive ? "selected" : ""
+                  }
+                >
+                  Explore
+                </NavLink>
+              </div>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    );
+    </div>
+  );
 };
 
 export default Header;
