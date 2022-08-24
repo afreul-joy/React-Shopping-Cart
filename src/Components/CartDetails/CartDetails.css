@@ -1,13 +1,12 @@
-.cartDetails-Container{
-    display: flex;
+.cartDetails-Container {
+  display: flex;
 }
 
 .CartProduct {
-    width: 70%;
+  width: 70%;
 }
 
-.PriceDetails {
-    width: 30%;
-    border-left: 1px solid black;
-  
+.CartPriceDetails {
+  width: 30%;
+  border-left: 1px solid black;
 }
